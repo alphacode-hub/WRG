@@ -1,0 +1,417 @@
+$color-1: hsla(215, 100%, 5%, 1);
+$color-2: hsla(335, 58%, 44%, 1);
+$color-3: hsla(314, 63%, 26%, 1);
+$color-4: hsla(186, 36%, 47%, 1);
+$color-5: hsla(212, 100%, 18%, 1);
+$color-6: hsla(212, 51%, 30%, 1);
+$color-6-05: hsla(212, 51%, 30%, .5);
+$sombra: 1px 1px 3px black;
+::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    display: block;  /* Ocultar scroll */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+::-webkit-scrollbar-thumb {
+background: linear-gradient($color-1,$color-2);
+border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+background: linear-gradient($color-2,$color-1);
+box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+background-color: $color-4;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+::-webkit-scrollbar-track {
+// background: linear-gradient($color-1,$color-2);
+// border-radius: 4px;
+background-color: black;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+// background: linear-gradient($color-1,$color-2);
+background-color: black;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    
+body {
+    // background: linear-gradient(to top,$color-1, $color-1,$color-3) ;
+    color: $color-2;
+    font-size: 1rem;
+}
+.bgfondo {
+    background: $color-1 url('../static/img/3618264-min.jpg')no-repeat scroll center;
+    background-size: cover;
+    height: 50vh;
+}
+.bgbody {
+    background: linear-gradient(to top,$color-3,$color-1) ;
+}
+.bgsticky {
+    position: sticky;
+    top: 0;
+    background: $color-1 ;
+    z-index: 100;
+}
+.sombra {
+    text-shadow: $sombra;
+}
+.cambiaColor {
+    color: $color-4;
+}
+.logo {
+    width: 50%;
+}
+.important {
+    text-transform: uppercase;
+    font-size: bold;
+    font-weight: 900;
+}
+.size-service {
+    font-size: 2em;
+}
+.item-menu {    
+    height: 50px;
+    position: relative;  
+    
+    transition: all 1s;
+   &:hover {
+       box-shadow: 0 -5px $color-4 inset;
+   }
+}
+.item-menu a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    color: $color-4;
+    font-size: 1.2rem;
+}
+
+.titulo {
+    color: $color-4;
+    font-size: 11vw;    
+}
+.card {
+    background-color: $color-6;
+    border: 1px solid $color-6;
+    color: white;
+    &:hover{
+        background-color: $color-6-05;
+        text-shadow: 2px 2px 8px $color-1;
+    }
+}
+.bgsvg {
+    margin: 10px;
+}
+.bgsvg img {
+    width: 50%;
+}
+.img-perfil {
+    margin-top: -30%;
+    clip-path: ellipse(30% 30% at 50% 60%);
+}
+.namebio {
+    font-size: 1.5em;
+    color: $color-4;
+}
+.bio {
+    color: white;
+}
+.bgfooter {
+    background-color: black;
+    font-size: .8em;
+}
+
+}
+
+
+/* Medium and up */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    body {
+        // background: linear-gradient(to top,$color-1, $color-1,$color-3) ;
+        color: $color-2;
+        font-size: 1rem;
+    }
+    .bgfondo {
+        background: $color-1 url('../static/img/3618264-min.jpg')no-repeat fixed center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .bgbody {
+        background: linear-gradient(to top,$color-3,$color-1) ;
+    }
+    .bgsticky {
+        position: sticky;
+        top: 0;
+        background: $color-1 ;
+        z-index: 100;
+    }
+    .sombra {
+        text-shadow: $sombra;
+    }
+    .cambiaColor {
+        color: $color-4;
+    }
+    .logo {
+        width: 20%;
+    }
+    .important {
+        text-transform: uppercase;
+        font-size: bold;
+        font-weight: 900;
+    }
+    .size-service {
+        font-size: 1em;
+    }
+    .item-menu {    
+        height: 50px;
+        position: relative;  
+        
+        transition: all 1s;
+       &:hover {
+           box-shadow: 0 -5px $color-4 inset;
+       }
+    }
+    .item-menu a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-decoration: none;
+        color: $color-4;
+        font-size: 1.2rem;
+    }
+    
+    .titulo {
+        color: $color-4;
+        font-size: 11vw;    
+    }
+    .card {
+        background-color: $color-6;
+        border: 1px solid $color-6;
+        color: white;
+        &:hover{
+            background-color: $color-6-05;
+            text-shadow: 2px 2px 8px $color-1;
+        }
+    }
+    .bgsvg {
+        margin: 10px;
+    }
+    .bgsvg img {
+        width: 30%;
+    }
+    .img-perfil {
+        margin-top: -20%;
+        clip-path: ellipse(30% 30% at 50% 60%);  
+        width: 50%;
+    }
+    .namebio {
+        font-size: 1.5em;
+        color: $color-4;
+    }
+    .bio {
+        color: white;
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    body {
+        // background: linear-gradient(to top,$color-1, $color-1,$color-3) ;
+        color: $color-2;
+        font-size: 2rem;
+    }
+    .bgfondo {
+        background: $color-1 url('../static/img/3618264-min.jpg')no-repeat fixed center;
+        background-size: cover;
+        height: 90vh;
+    }
+    .bgbody {
+        background: linear-gradient(to top,$color-3,$color-1) ;
+    }
+    .bgsticky {
+        position: sticky;
+        top: 0;
+        background: $color-1 ;
+        z-index: 100;   
+    }
+    .sombra {
+        text-shadow: $sombra;
+    }
+    .cambiaColor {
+        color: $color-4;
+    }
+    .logo {
+        width: 20%;
+    }
+    .important {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+    }
+    .size-service {
+        font-size: 1em;
+    }
+    .resumen {
+        font-size: .5em;
+    }
+    .item-menu {    
+        height: 50px;
+        position: relative;  
+        
+        transition: all 1s;
+       &:hover {
+           box-shadow: 0 -5px $color-4 inset;
+       }
+    }
+    .item-menu a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-decoration: none;
+        color: $color-4;
+        font-size: 1.2rem;
+    }
+    
+    .titulo {
+        color: $color-4;
+        font-size: 8vw;    
+    }
+    .card {
+        background-color: $color-6;
+        border: 1px solid $color-6;
+        color: white;
+        padding: 10px;
+        &:hover{
+            background-color: $color-6-05;
+            text-shadow: 2px 2px 8px $color-1;
+        }
+    }
+    .bgsvg {
+        margin: 10px;
+    }
+    .bgsvg img {
+        width: 40%;
+    }
+
+    .info {
+        font-size: .7em;
+    }
+    .img-perfil {
+        margin-top: -30%;
+        clip-path: ellipse(30% 30% at 50% 60%);  
+        width: 100%;
+    }
+    .namebio {
+        font-size: .8em;
+        color: $color-4;
+    }
+    .bio {
+        color: white;
+        font-size: .5em;
+    }
+
+}
+
+@media screen and (min-width: 75em) {
+    body {
+        // background: linear-gradient(to top,$color-1, $color-1,$color-3) ;
+        color: $color-2;
+        font-size: 1rem;
+    }
+    .bgfondo {
+        background: $color-1 url('../static/img/3618264-min.jpg')no-repeat fixed center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .bgbody {
+        background: linear-gradient(to top,$color-3,$color-1) ;
+    }
+    .bgsticky {
+        position: sticky;
+        top: 0;
+        background: $color-1 ;
+        z-index: 100;
+    }
+    .sombra {
+        text-shadow: $sombra;
+    }
+    .cambiaColor {
+        color: $color-4;
+    }
+    .logo {
+        width: 20%;
+    }
+    .important {
+        text-transform: uppercase;
+        font-size: bold;
+        font-weight: 900;
+    }
+    .size-service {
+        font-size: 1em;
+    }
+    .item-menu {    
+        height: 50px;
+        position: relative;  
+        
+        transition: all 1s;
+       &:hover {
+           box-shadow: 0 -5px $color-4 inset;
+       }
+    }
+    .item-menu a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-decoration: none;
+        color: $color-4;
+        font-size: 1.2rem;
+    }
+    
+    .titulo {
+        color: $color-4;
+        font-size: 11vw;    
+    }
+    .card {
+        background-color: $color-6;
+        border: 1px solid $color-6;
+        color: white;
+        &:hover{
+            background-color: $color-6-05;
+            text-shadow: 2px 2px 8px $color-1;
+        }
+    }
+    .bgsvg {
+        margin: 10px;
+    }
+
+    .img-perfil {
+        margin-top: -30%;
+        clip-path: ellipse(30% 30% at 50% 60%);  
+        width: 100%;
+    }
+    .namebio {
+        font-size: .8em;
+        color: $color-4;
+    }
+    .bio {
+        color: white;
+        font-size: .5em;
+    }
+
+}
